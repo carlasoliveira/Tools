@@ -13,3 +13,18 @@ function calcularRegraDeTres(){
     let resultado = (parseFloat(valor2) * parseFloat(valor3)) / parseFloat(valor1);
     document.getElementById('resultadoRegraDeTres').innerText = resultado;
 }
+
+//Acrescimo
+function calcularAcrescimoPorcentagem(){
+    let valorInicial = document.getElementById('valorInicialAcrescimo').value;
+    let valorAcrescimo = document.getElementById('valorAcrescimo').value;
+    let resultado = parseFloat(valorInicial) + (parseFloat(valorAcrescimo)*(parseFloat(valorInicial)/100));
+    document.getElementById('resultadoAcrescimo').innerText = resultado;
+}
+//Desconto
+function calcularDescontoPorcentagem(){
+    let valorInicial = document.getElementById('valorInicialDesconto').value;
+    let valorDesconto = document.getElementById('valorDesconto').value;
+    let resultado = parseFloat(valorInicial) - (parseFloat(valorDesconto)*(parseFloat(valorInicial)/100));
+    document.getElementById('resultadoDesconto').innerText = resultado;
+}
