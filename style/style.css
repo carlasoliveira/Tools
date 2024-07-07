@@ -5,6 +5,15 @@
   margin: 0;
 }
 
+.title{
+  font-family: "Copperplate", fantasy;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+  color: #515151;
+  text-decoration: none;
+}
+
 body {
   background-color: #F1F0F2;
 }
@@ -95,7 +104,8 @@ footer {
   font-size: large;
   line-height: 2;
   vertical-align: middle;
-  position: inherit;
+  position: absolute;
+  width: 100%;
 }
 
 .projects-grid {
