@@ -37,7 +37,7 @@ function calcularDescontoPorcentagem(){
 
 //Busca CEP
 async function buscaCEP(){
-    const cep = document.getElementById('cep').value;
+    const cep = document.getElementById('inputCEP').value;
     if(!cep){
         alert('É necessário informar um CEP válido');
         return;
@@ -45,11 +45,18 @@ async function buscaCEP(){
     const url = `https://opencep.com/v1/${cep}`;
     try{
         const response = await fetch(url);
+        console.log("antes");
         if(!resposta.ok){
             alert('Erro ao buscar CEP');
         }
+        console.log(responde);
         const endereco = await response.json();
-        document.getElementById('cep-logradouro').value=logradouro;
+        document.getElementById('cep-logradouro').value=endereco.logradouro;
+        document.getElementById('cep-complemento').value=endereco.complemento;
+        document.getElementById('cep-bairro').value=endereco.bairro;
+        document.getElementById('cep-cidade').value=endereco.cidade;
+        document.getElementById('cep-uf').value=endereco.uf;
+        console.log("depois")
     } catch(error){
         alert('Erro ao buscar CEP');
     }
