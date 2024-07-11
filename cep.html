@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ferramentas utilitárias">
+    <meta name="keywords" content="ferramentas, calcular, contar caracteres, contagem de caracteres">
+    <meta name="author" content="Carla Santos de Oliveira">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contador de caracteres">
+    <meta property="og:description" content="Ferramenta para contar caracteres de um texto">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <title>Ferramentas utilitárias</title>
+    <style></style>
+    <link rel="stylesheet" href="style/style.css" />
+</head>
+
+<body>
+    <header id="menu">
+        <nav class="navigation-menu">
+            <ul>
+                <li class="menu-item"><a href="/index.html">Ferramentas</a></li>
+                <li class="menu-item"><a href="https://carlasoliveira.github.io/Portfolio/">Sobre o autor</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section id="tools" class="content-section">
+            <h2>Buscador de CEP</h2>
+            <p>O buscador de CEP permite localizar endereços completos a partir do Código de Endereçamento Postal (CEP),
+                fornecendo informações detalhadas, como rua, bairro, cidade e estado, facilitando a
+                identificação e verificação de endereços em todo o território nacional. Insira o CEP no espaço abaixo e
+                verifique as informações de endereço relacionadas a ele.</p>
+            <br>
+            <input type="number" id="cep" placeholder="Insira o CEP a ser buscado">
+            <input type="button" value="Calcular" onclick="buscaCEP()">
+            <p id="cep-logradouro"></p>
+            <p id="cep-complemento"></p>
+            <p id="cep-bairro"></p>
+            <p id="cep-localidade"></p>
+            <p id="cep-uf"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Carla S. Oliveira</p>
+    </footer>
+    <script src="/index.js"></script>
+</body>
+
+</html>

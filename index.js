@@ -34,3 +34,23 @@ function calcularDescontoPorcentagem(){
     resultadoFormatado = resultadoFormatado.replace('.', ',');
     document.getElementById('resultadoDesconto').innerText = resultadoFormatado;
 }
+
+//Busca CEP
+async function buscaCEP(){
+    const cep = document.getElementById('cep').value;
+    if(!cep){
+        alert('É necessário informar um CEP válido');
+        return;
+    }
+    const url = `https://opencep.com/v1/${cep}`;
+    try{
+        const response = await fetch(url);
+        if(!resposta.ok){
+            alert('Erro ao buscar CEP');
+        }
+        const endereco = await response.json();
+        document.getElementById('cep-logradouro').value=logradouro;
+    } catch(error){
+        alert('Erro ao buscar CEP');
+    }
+}
