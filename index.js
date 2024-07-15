@@ -46,16 +46,16 @@ async function buscaCEP(){
     try{
         const response = await fetch(url);
         console.log("antes");
-        if(!resposta.ok){
+        if(!response.ok){
             alert('Erro ao buscar CEP');
         }
-        console.log(responde);
         const endereco = await response.json();
-        document.getElementById('cep-logradouro').value=endereco.logradouro;
-        document.getElementById('cep-complemento').value=endereco.complemento;
-        document.getElementById('cep-bairro').value=endereco.bairro;
-        document.getElementById('cep-cidade').value=endereco.cidade;
-        document.getElementById('cep-uf').value=endereco.uf;
+        console.log(endereco);
+        document.getElementById('cep-logradouro').textContent="Logradouro: "+endereco.logradouro;
+        document.getElementById('cep-complemento').textContent="Complemento: "+endereco.complemento;
+        document.getElementById('cep-bairro').textContent="Bairro: "+endereco.bairro;
+        document.getElementById('cep-localidade').textContent="Localidade: "+endereco.localidade;
+        document.getElementById('cep-uf').textContent="UF: "+endereco.uf;
         console.log("depois")
     } catch(error){
         alert('Erro ao buscar CEP');

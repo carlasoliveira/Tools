@@ -1,4 +1,8 @@
 :root{
-    --primary-color: #739CBF;
+    --main-primary-color: #739CBF;
+    --main-background-color: #88AABF;
+    --main-box-shadow-color: rgba(0, 0, 0, 0.1);
+    --main-box-shadow-color-hover: rgba#383838;
+    --main-font-color: #515151;
 }
   
