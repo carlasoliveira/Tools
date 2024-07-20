@@ -131,6 +131,10 @@ footer {
   padding: 20px;
 }
 
+.project-info h3{
+  text-align: left;
+}
+
 .contact-info {
   margin-top: 20px;
 }
