@@ -41,13 +41,17 @@ header {
 /*Conteúdo das seções*/
 .content-section {
   color: var(--main-font-color);
-  text-align: justify;
+  text-align: left;
   font-family: "Copperplate", fantasy;
   font-size: large;
   padding: 20px;
   line-height: 2;
 }
  
+.content-section p {
+  text-align: justify;
+}
+
 input {
   width: 100%;
   padding: 12px 20px;
